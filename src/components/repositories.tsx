@@ -206,62 +206,63 @@ function AddRepository({ onAdd, onClose }: { onAdd: (newRepo: any) => void, onCl
 
   return (
     <div className="bg-white p-8 rounded-lg shadow-lg w-[400px] relative">
-      <button
-        className="absolute top-2 right-2 text-xl text-gray-500"
-        onClick={onClose}
-      >
-        ×
-      </button>
-      <h2 className="text-xl font-semibold mb-4">Add Repository</h2>
-      <form onSubmit={handleSubmit} className="flex flex-col gap-4">
-        <input
-          type="text"
-          placeholder="Repository Name"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          className="border p-2 rounded"
-          required
-        />
-        <select
-          value={access}
-          onChange={(e) => setAccess(e.target.value)}
-          className="border p-2 rounded"
-        >
-          <option value="Public">Public</option>
-          <option value="Private">Private</option>
-        </select>
-        <input
-          type="text"
-          placeholder="Languages"
-          value={languages}
-          onChange={(e) => setLanguages(e.target.value)}
-          className="border p-2 rounded"
-          required
-        />
-        <input
-          type="text"
-          placeholder="Size (e.g., 2.6 MB)"
-          value={size}
-          onChange={(e) => setSize(e.target.value)}
-          className="border p-2 rounded"
-          required
-        />
-        <input
-          type="number"
-          placeholder="Updates (days ago)"
-          value={updates}
-          onChange={(e) => setUpdates(e.target.value)}
-          className="border p-2 rounded"
-          required
-        />
-        <button
-          type="submit"
-          className="bg-[#1470ef] text-white p-2 rounded-lg"
-        >
-          Add
-        </button>
-      </form>
-    </div>
+  <button
+    className="absolute top-1 right-3 text-4xl font-bold text-gray-900 hover:text-black transition duration-200"
+    onClick={onClose}
+  >
+    ×
+  </button>
+  <h2 className="text-xl font-semibold mb-4">Add Repository</h2>
+  <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+    <input
+      type="text"
+      placeholder="Repository Name"
+      value={name}
+      onChange={(e) => setName(e.target.value)}
+      className="border p-2 rounded"
+      required
+    />
+    <select
+      value={access}
+      onChange={(e) => setAccess(e.target.value)}
+      className="border p-2 rounded"
+    >
+      <option value="Public">Public</option>
+      <option value="Private">Private</option>
+    </select>
+    <input
+      type="text"
+      placeholder="Languages"
+      value={languages}
+      onChange={(e) => setLanguages(e.target.value)}
+      className="border p-2 rounded"
+      required
+    />
+    <input
+      type="text"
+      placeholder="Size (e.g., 2.6 MB)"
+      value={size}
+      onChange={(e) => setSize(e.target.value)}
+      className="border p-2 rounded"
+      required
+    />
+    <input
+      type="number"
+      placeholder="Updates (days ago)"
+      value={updates}
+      onChange={(e) => setUpdates(e.target.value)}
+      className="border p-2 rounded"
+      required
+    />
+    <button
+      type="submit"
+      className="bg-[#1470ef] text-white p-2 rounded-lg"
+    >
+      Add
+    </button>
+  </form>
+</div>
+
   );
 }
 
