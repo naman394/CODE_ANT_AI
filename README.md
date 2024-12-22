@@ -1,4 +1,4 @@
-CodeAnt AI
+## CodeAnt AI
 
 
 This project is created as an assignment for the intern role at CodeAnt AI. It provides an interactive and user-friendly interface to manage repositories, allowing users to view, search, and add repositories. The project is built using React and is designed to be easily scalable and maintainable.
