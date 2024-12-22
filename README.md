@@ -1,15 +1,20 @@
 # CodeAnt AI
 
-
 This project is created as an assignment for the intern role at CodeAnt AI. It provides an interactive and user-friendly interface to manage repositories, allowing users to view, search, and add repositories. The project is built using React and is designed to be easily scalable and maintainable.
 
+### Live Deployment
+[CodeAnt AI Live](https://code-ant-ai-two.vercel.app/)
 
-Technologies Used
-* React: A JavaScript library for building user interfaces.
-* Tailwind CSS: A utility-first CSS framework for rapid UI development.
-* JavaScript (ES6+): Modern JavaScript features like arrow functions, destructuring, etc.
-* HTML5: For building the structure of the app.
-* CSS: For styling and layout.
+---
+
+## Technologies Used
+
+- **React**: A JavaScript library for building user interfaces.
+- **Tailwind CSS**: A utility-first CSS framework for rapid UI development.
+- **JavaScript (ES6+)**: Modern JavaScript features like arrow functions, destructuring, etc.
+- **HTML5**: For building the structure of the app.
+- **CSS**: For styling and layout.
+
 
 
 ## Installation  
