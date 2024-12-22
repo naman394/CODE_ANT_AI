@@ -65,19 +65,29 @@ function Repositories() {
   );
 
   // Add new repository
-  const addRepository = (newRepo) => {
-    console.log("Adding new repository:", newRepo); // Debugging
-    setData((prevData) => [...prevData, newRepo]);
+  const addRepository = (newRepo: { name: string; url: string; description: string }) => {
+    // Create a new repository object that matches the expected shape
+    const repoToAdd = {
+      name: newRepo.name,
+      access: "Public", // Default value
+      languages: "JavaScript", // Default value
+      size: "Large", // Default value
+      updates: "Recently updated", // Default value
+    };
+  
+    console.log("Adding new repository:", repoToAdd); // Debugging
+    setData((prevData) => [...prevData, repoToAdd]);
     setShowAddForm(false); // Close the form after adding the repository
-
+  
     // Show success popup
     setShowSuccessPopup(true);
-
+  
     // Hide the success popup after 2 seconds
     setTimeout(() => {
       setShowSuccessPopup(false);
     }, 2000);
   };
+  
 
   return (
     <div className="bg-[#fafafa] w-full md:w-full h-[100vh] md:overflow-scroll">
@@ -186,12 +196,13 @@ function AddRepository({ onAdd, onClose }: { onAdd: (newRepo: any) => void, onCl
   const [size, setSize] = useState("");
   const [updates, setUpdates] = useState("");
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const newRepo = { name, access, languages, size, updates };
     console.log("Form submitted:", newRepo); // Debugging
     onAdd(newRepo);
   };
+  
 
   return (
     <div className="bg-white p-8 rounded-lg shadow-lg w-[400px] relative">
